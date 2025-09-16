@@ -1,0 +1,30 @@
+services:
+  # Backend API Service
+  - type: web
+    name: maharashtra-tourism-api
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        fromDatabase:
+          name: maharashtra-tourism-db
+          property: connectionString
+    healthCheckPath: /api/destinations
+
+  # Frontend Service
+  - type: web
+    name: maharashtra-tourism-frontend
+    env: static
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: maharashtra-tourism-api
+          property: host
