@@ -1,0 +1,36 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="url(#gradient)"/>
+  
+  <!-- Fort Base -->
+  <rect x="4" y="16" width="24" height="12" fill="white" rx="1"/>
+  
+  <!-- Fort Walls -->
+  <rect x="3" y="14" width="26" height="2" fill="white"/>
+  
+  <!-- Central Tower -->
+  <rect x="13" y="8" width="6" height="8" fill="white" rx="1"/>
+  
+  <!-- Tower Top -->
+  <polygon points="16,4 10,8 22,8" fill="white"/>
+  
+  <!-- Side Towers -->
+  <rect x="6" y="10" width="3" height="6" fill="white" rx="0.5"/>
+  <rect x="23" y="10" width="3" height="6" fill="white" rx="0.5"/>
+  
+  <!-- Tower Tops -->
+  <polygon points="7.5,8 4.5,10 10.5,10" fill="white"/>
+  <polygon points="24.5,8 21.5,10 27.5,10" fill="white"/>
+  
+  <!-- Flag -->
+  <rect x="15" y="2" width="2" height="3" fill="white"/>
+  <polygon points="17,2 17,3 18,2.5" fill="white"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
